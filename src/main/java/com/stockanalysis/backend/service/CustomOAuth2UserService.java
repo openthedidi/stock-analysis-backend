@@ -72,6 +72,6 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
             userRepository.save(user);
         }
 
-        return UserPrincipal.create(user);
+        return UserPrincipal.create(user, oAuth2User.getAttributes());
     }
 }
